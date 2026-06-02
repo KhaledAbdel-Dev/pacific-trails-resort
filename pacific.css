@@ -1,0 +1,121 @@
+/* COMP 4610 GUI I - HW2: Pacific Trails Resort external stylesheet */
+
+/* Make HTML5 structural elements behave as blocks for older browsers */
+header, hgroup, nav, footer, figure, figcaption, aside, section, article {
+	display: block;
+}
+
+/* Page background: gradient image at the top that does NOT repeat down the
+   page, sitting on a solid #00569f fill that matches the bottom of the
+   gradient so the rest of the page stays solid blue. */
+body {
+	background-color: #00569f;
+	background-image: url(ptrbackground.jpg);
+	background-repeat: repeat-x;
+	color: #666666;
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0;
+}
+
+/* The main content area: 80% of the window width, never narrower than
+   600px, centered horizontally with a white panel and soft shadow. */
+#wrapper {
+	width: 80%;
+	min-width: 600px;
+	margin: 0 auto;
+	background-color: #FFFFFF;
+	box-shadow: 3px 3px 6px #333333;
+}
+
+/* Header banner uses the sunset panorama scaled to fill the strip. */
+header {
+	background-color: #000033;
+	background-image: url(sunset.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+h1 {
+	margin: 0;
+	padding: 20px 10px;
+	color: #FFFFFF;
+}
+
+h2 {
+	color: #3399CC;
+}
+
+h1, h2 {
+	font-family: Georgia, "Times New Roman", serif;
+}
+
+/* Navigation: fixed-width column floated to the left so the content to its
+   right can flex with the window. No bullets, no underlines. */
+nav {
+	float: left;
+	width: 120px;
+}
+
+nav ul {
+	font-size: 1.2em;
+	list-style-type: none;
+	margin: 0;
+	padding: 20px 10px;
+	line-height: 2.5em;
+	font-weight: bold;
+}
+
+nav a {
+	text-decoration: none;
+}
+
+nav a:link {
+	color: #3399CC;
+}
+
+nav a:visited {
+	color: #344873;
+}
+
+nav a:hover {
+	color: #FFFFFF;
+}
+
+/* Content column sits to the right of the fixed-width nav. The left margin
+   clears the floated navigation while the column itself stays fluid. */
+#content {
+	margin-left: 140px;
+	padding: 0 20px 20px 20px;
+}
+
+/* Custom bullet image. Pulling the list left so the marker lines up under
+   the left edge of the paragraph text above it. */
+#content ul {
+	list-style-image: url(marker.gif);
+	margin-left: 0;
+	padding-left: 1.2em;
+}
+
+/* The resort name gets special coloring wherever it appears in the body. */
+.resort {
+	color: #3399CC;
+	font-weight: bold;
+}
+
+#contact {
+	font-size: 90%;
+}
+
+dt {
+	color: #000033;
+}
+
+/* Footer clears the floated nav and is styled in the serif face. */
+footer {
+	clear: both;
+	margin-left: 140px;
+	padding: 20px;
+	font-family: Georgia, "Times New Roman", serif;
+	font-size: 75%;
+	font-style: italic;
+}
